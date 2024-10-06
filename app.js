@@ -14,7 +14,6 @@ app.use(express.static("public"));
 const User = require("./models/userModel");
 
 const userRoute= require('./routes/userRoute');
-
 app.use('/api/users',userRoute)
 
 sequelize
