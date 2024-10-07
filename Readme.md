@@ -184,3 +184,9 @@ The server will run on http://localhost:5800
    ` npm run dev`
 
    Make Sure that backend server is running !
+
+   Frontend Routes are:
+
+   1. **http://localhost:5173/ for SignUp**
+   2. **http://localhost:5173/login for login**
+   3. **http://localhost:5173/allusers for listing all users**
