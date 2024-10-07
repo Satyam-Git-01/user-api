@@ -99,11 +99,25 @@ const deleteUser = async (req, res) => {
 const getAllUsers = async (req, res) => {
   try {
     const users = await User.findAll({
-      attributes: { exclude: ["password"] }, 
+      attributes: { exclude: ["password"] },
     });
     res.status(200).json(users);
   } catch (error) {
     res.status(500).json({ message: "Server error", error });
+  }
+};
+
+const getUserById = async (req, res) => {
+  try {
+    console.log("getUserById");
+    const userId = req.params.userId;
+    const result = await User.findByPk(userId);
+    if (!result) {
+      return res.status(500).json({ message: "User not found" });
+    }
+    return res.status(200).json(result);
+  } catch (err) {
+    res.status(500).json({ message: "Server error" });
   }
 };
 
@@ -112,5 +126,6 @@ module.exports = {
   login,
   updateUser,
   deleteUser,
-  getAllUsers
+  getAllUsers,
+  getUserById,
 };

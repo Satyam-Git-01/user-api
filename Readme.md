@@ -130,10 +130,9 @@ The server will run on http://localhost:5800
 ```json
 {
   "email": "user123@gmail.com",
-  "phonenumber":"4678"
+  "phonenumber": "4678"
 }
 ```
-
 
 4. **Delete a User**
 
@@ -143,16 +142,22 @@ The server will run on http://localhost:5800
    **Body** : None
 
 5. **Get All Users**
-   
+
    **Method** : GET  
    **Endpoint** : `/api/users/getAllusers`  
    **Headers** : Authorization Token Required  
    **Body** : None
 
+6. **Get User by Id**
+
+   **Method** : GET  
+   **Endpoint** : `/api/users/getuserById/:userId`  
+   **Headers** : Authorization Token Required  
+   **Body** : None
 
 # How to test this project?
 
- **Use POSTMAN or ThunderClient to test it.**
+1. **Use POSTMAN or ThunderClient to test it.**
 
    Below are the URLs:
 
@@ -163,5 +168,19 @@ The server will run on http://localhost:5800
    **Update - http://localhost:5800/api/users/update/1**
 
    **Delete- http://localhost:5800/api/users/delete/1**
-   
+
    **GetAllUsers- http://localhost:5800/api/users/getAllusers**
+
+   **GetUserById- http://localhost:5800/api/users/getuserById/2**
+
+2. **Clone Frontend Repository**
+
+   URL - https://github.com/Satyam-Git-01/userapi-frontend.git
+
+   ` Go to root directory`
+
+   `npm install`
+
+   ` npm run dev`
+
+   Make Sure that backend server is running !
